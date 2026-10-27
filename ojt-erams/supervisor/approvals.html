@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Attendance Review | OJT-ERAMS Supervisor</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body data-portal="supervisor">
+  <div class="layout">
+    <aside id="sidebar"></aside>
+    <div class="main">
+      <header id="topbar"></header>
+      <section class="content">
+
+        <div class="page-head">
+          <div><h2 class="page-title">Attendance Review</h2><p class="muted" id="countNote"></p></div>
+          <button class="btn btn-navy" id="bulkBtn" type="button">✅ Approve selected</button>
+        </div>
+        <div class="spot-note">Records that pass every check (location, face, blink, photo, shift length) are approved automatically. You review the <b>unusual</b> ones, and a few random auto-approved shifts as <b>spot-checks</b>.</div>
+        <div class="tabs">
+          <button class="tab active" data-tab="pending" type="button">To review <span id="cPending"></span></button>
+          <button class="tab" data-tab="spot" type="button">Spot-checks <span id="cSpot"></span></button>
+        </div>
+        <div class="card" id="panel"></div>
+      </section>
+    </div>
+  </div>
+  <script src="../js/boot.js" data-page="js/approvals.js" data-with="widgets"></script>
+</body>
+</html>
